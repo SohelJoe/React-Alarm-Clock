@@ -1,0 +1,217 @@
+body{
+  /* background-color: coral; */
+  padding: 0;
+  margin: 0;
+}
+
+
+/* CLOCK BODY */
+
+.clock{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: antiquewhite;
+  margin: 80px auto 20px auto;
+  position: relative;
+  border:20px solid rgb(207, 168, 129);
+  z-index: -4;
+}
+
+.center{
+  background-color: #000;
+  position: absolute;
+  left: calc(50% - 10px);
+  top:  calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hourHand{
+  width: 10px;
+  height: 75px;
+  background-color: #000;
+  transform-origin: bottom center;
+  border-radius: 4px;
+  position: absolute;
+  top: 75px;
+  left: 145px;
+  z-index: -3;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  transform: rotate(360deg);
+}
+
+.minuteHand{
+  width: 5px;
+  height: 120px;
+  background-color: #000;
+  transform-origin: bottom center;
+  border-radius: 4px;
+  position: absolute;
+  top: 30px;
+  left: 147px;
+  z-index: -2;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  transform: rotate(90deg);
+}
+
+.secondHand{
+  width: 2px;
+  height: 120px;
+  background-color:red;
+  transform-origin: bottom center;
+  border-radius: 4px;
+  position: absolute;
+  top: 30px;
+  left: 149px;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  z-index: -1;  
+  transform: rotate(180deg);
+}
+
+.date{
+  position: absolute;
+  top: 46%;
+  left: 10%;
+  border: 1px solid #fff8dc;
+  background-color: #fff;
+  padding: 5px;
+  display: block;
+  box-shadow: inset 0px 2px 5px rgba(0,0,0,.4);
+  border-radius: 5px;
+  min-width: 85px;
+  height: 15px;
+  font-size: 12px;
+  z-index: -4;
+}
+
+.clock ul{
+  list-style: none;
+  padding: 0;
+}
+
+.clock ul li{
+  position: absolute;
+  width:20px;
+  height:20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+  color:red;
+}
+.clock ul li:nth-child(1){
+  right: 22%;
+  top:6.5%;
+}
+.clock ul li:nth-child(2){
+  right: 6%;
+  top:25%;
+}
+.clock ul li:nth-child(3){
+  right: 1%;
+  top:calc(50% - 10px);
+  color:#000;
+  font-size: 25px;
+  font-weight: bold;
+}
+.clock ul li:nth-child(4){
+  right: 6%;
+  top:69%;
+}
+.clock ul li:nth-child(5){
+  right: 22%;
+  top:84%;
+}
+.clock ul li:nth-child(6){
+  right: calc(50% - 10px);
+  top:calc(99% - 20px);
+  color:#000;
+  font-size: 25px;
+  font-weight: bold;
+}
+.clock ul li:nth-child(7){
+  left: 22%;
+  top:84%;
+}
+.clock ul li:nth-child(8){
+  left: 6%;
+  top:69%;
+}
+.clock ul li:nth-child(9){
+  left: 1%;
+  top:calc(50% - 10px);
+  color:#000;
+  font-size: 25px;
+  font-weight: bold;
+}
+.clock ul li:nth-child(10){
+  left: 6%;
+  top:25%;
+}
+.clock ul li:nth-child(11){
+  left: 22%;
+  top:6.5%;
+}
+.clock ul li:nth-child(12){
+  right: calc(50% - 10px);
+  top:1%;
+  color:#000;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* MODAL */
+
+.modal{
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: beige;
+}
+
+.modal h4{
+  text-transform: uppercase;
+}
+
+.modal img {
+  width: 60vw;
+  max-width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.modal button{
+  height: 50px;
+  width: 250px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  letter-spacing: 3px;
+  color: black;
+  font-weight: bold;
+  text-transform:uppercase;
+}
+
+.modal button:hover{
+  background-color:rgb(24, 23, 23) ;
+  color: rgb(255, 255, 255);
+}
