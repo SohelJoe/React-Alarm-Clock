@@ -1,5 +1,5 @@
 # Getting Started with Create React App
-
+This is a Simple website made with ReactJs. Here You can set Alarm with Remainder Text.
 
 ## Demo : https://reactjs-alarmclock.web.app/
 
